@@ -13,7 +13,7 @@ use RpHaven\App\Result;
 use Symfony\Component\Messenger\HandleTrait;
 use Symfony\Component\Messenger\MessageBusInterface;
 
-final readonly class SymfonyQueryBus implements QueryBus
+final class SymfonyQueryBus implements QueryBus
 {
     use HandleTrait {
         handle as handleQuery;
