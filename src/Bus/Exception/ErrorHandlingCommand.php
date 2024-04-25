@@ -11,10 +11,12 @@ use Throwable;
 
 final class ErrorHandlingCommand extends RuntimeException implements CommandBusException, SymfonyMessageBusException
 {
+    public const MSG_FORMAT = 'Error handling command %s: %s';
+
     public function __construct(public readonly Command $command, Throwable $previous)
     {
         parent::__construct(
-            message: sprintf('Error handling command %s: %s', get_class($this->command), $previous->getMessage()),
+            message: sprintf(self::MSG_FORMAT, get_class($this->command), $previous->getMessage()),
             previous: $previous,
         );
     }

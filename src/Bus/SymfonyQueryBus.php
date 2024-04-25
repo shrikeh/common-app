@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace RpHaven\App\Bus;
 
-use Exception;
 use RpHaven\App\Bus\Exception\ErrorHandlingQuery;
-use RpHaven\App\Query\QueryBus;
 use RpHaven\App\Query;
+use RpHaven\App\Query\QueryBus;
 use RpHaven\App\Query\QueryBus\Exception\QueryBusException;
 use RpHaven\App\Result;
 use Symfony\Component\Messenger\HandleTrait;
 use Symfony\Component\Messenger\MessageBusInterface;
+use Throwable;
 
 final class SymfonyQueryBus implements QueryBus
 {
@@ -32,7 +32,7 @@ final class SymfonyQueryBus implements QueryBus
     {
         try {
             return $this->handleQuery($query);
-        } catch (Exception $exc) {
+        } catch (Throwable $exc) {
             throw new ErrorHandlingQuery($query, $exc);
         }
     }
