@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RpHaven\App\Log\Traits;
 
-trait ContextEnum
+trait StringableEnum
 {
     public function toString(): string
     {

@@ -24,7 +24,8 @@
     "squizlabs/php_codesniffer": "*",
     "symfony/dotenv": "*",
     "symfony/messenger": "*",
-    "vimeo/psalm": "*"
+    "vimeo/psalm": "*",
+    "psr/log": "*"
   },
   "autoload": {
     "psr-4": {
