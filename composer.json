@@ -22,10 +22,7 @@
     "phpunit/phpcov": "*",
     "phpunit/phpunit": "*",
     "squizlabs/php_codesniffer": "*",
-    "symfony/dotenv": "*",
-    "symfony/messenger": "*",
-    "vimeo/psalm": "*",
-    "psr/log": "*"
+    "vimeo/psalm": "*"
   },
   "autoload": {
     "psr-4": {
