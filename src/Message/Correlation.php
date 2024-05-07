@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App;
+namespace RpHaven\App\Message;
 
 use DateTimeImmutable;
-use RpHaven\App\Correlation\CorrelationId;
+use RpHaven\App\Message\Correlation\CorrelationId;
 
 final readonly class Correlation
 {

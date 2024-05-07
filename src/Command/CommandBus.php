@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace RpHaven\App\Command;
 
-use RpHaven\App\Command;
 use RpHaven\App\Command\CommandBus\Exception\CommandBusException;
-use RpHaven\App\Result;
+use RpHaven\App\Message\Command;
+use RpHaven\App\Message\Result;
 
 interface CommandBus
 {

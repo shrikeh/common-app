@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App;
+namespace RpHaven\App\Message;
 
 interface Correlated
 {

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace RpHaven\App\Query;
 
 
-use RpHaven\App\Query;
-use RpHaven\App\Result;
+use RpHaven\App\Message\Query;
+use RpHaven\App\Message\Result;
 
 interface QueryBus
 {
