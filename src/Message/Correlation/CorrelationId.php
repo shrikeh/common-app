@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Message\Correlation;
+namespace Shrikeh\App\Message\Correlation;
 
 use Stringable;
 

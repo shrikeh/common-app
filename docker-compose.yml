@@ -1,0 +1,11 @@
+---
+version: '3.9'
+services:
+  app-common:
+    build:
+      context: ./
+      dockerfile: dev/docker/services/php/Dockerfile
+      args:
+        - "PHP_IMAGE_APP_VERSION=fpm-alpine3.20"
+    volumes:
+      - ./:/shrikeh

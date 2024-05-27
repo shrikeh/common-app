@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Log\Level;
+namespace Shrikeh\App\Log\Level;
 
-use RpHaven\App\Log\Level;
-use RpHaven\App\Log\Traits\StringableEnum;
+use Shrikeh\App\Log\Level;
+use Shrikeh\App\Log\Traits\StringableEnum;
 
 enum Psr3: string implements Level
 {

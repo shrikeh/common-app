@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Log\Exception;
+namespace Shrikeh\App\Log\Exception;
 
-use RpHaven\App\Exception\AppException;
+use Shrikeh\App\Exception\AppException;
 
 interface LogException extends AppException
 {

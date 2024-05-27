@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Command\CommandHandler\Exception;
+namespace Shrikeh\App\Command\CommandHandler\Exception;
 
-use RpHaven\App\Command\Exception\CommandException;
+use Shrikeh\App\Command\Exception\CommandException;
 
 interface CommandHandlerException extends CommandException
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Log\Traits;
+namespace Shrikeh\App\Log\Traits;
 
 trait StringableEnum
 {

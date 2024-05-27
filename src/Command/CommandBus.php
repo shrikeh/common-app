@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Command;
+namespace Shrikeh\App\Command;
 
-use RpHaven\App\Command\CommandBus\Exception\CommandBusException;
-use RpHaven\App\Message\Command;
-use RpHaven\App\Message\Result;
+use Shrikeh\App\Command\CommandBus\Exception\CommandBusException;
+use Shrikeh\App\Message\Command;
+use Shrikeh\App\Message\Result;
 
 interface CommandBus
 {

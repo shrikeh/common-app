@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Command;
+namespace Shrikeh\App\Command;
 
 interface CommandHandler
 {

@@ -2,23 +2,24 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Message;
+namespace Shrikeh\App\Message;
 
 use DateTimeImmutable;
-use RpHaven\App\Message\Correlation\CorrelationId;
+use Shrikeh\App\Message\Correlation\CorrelationId;
+use Stringable;
 
-final readonly class Correlation
+final readonly class Correlation implements Stringable
 {
     public function __construct(
-        public DateTimeImmutable $dateTime,
         public CorrelationId $correlationId,
+        public DateTimeImmutable $dateTime = new DateTimeImmutable(),
     ) {
 
     }
 
     public function __toString(): string
     {
-
+        return $this->toString();
     }
 
     public function toString(): string

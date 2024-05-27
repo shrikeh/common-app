@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Query;
+namespace Shrikeh\App\Query;
 
 
-use RpHaven\App\Message\Query;
-use RpHaven\App\Message\Result;
+use Shrikeh\App\Message\Query;
+use Shrikeh\App\Message\Result;
 
 interface QueryBus
 {

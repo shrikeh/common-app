@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Log;
+namespace Shrikeh\App\Log;
 
 interface Level
 {
-    public function toString();
+    public function toString(): string;
 }

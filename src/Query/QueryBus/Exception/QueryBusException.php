@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Query\QueryBus\Exception;
+namespace Shrikeh\App\Query\QueryBus\Exception;
 
-use RpHaven\App\Command\Exception\CommandException;
+use Shrikeh\App\Command\Exception\CommandException;
 
 interface QueryBusException extends CommandException
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Log\Context;
+namespace Shrikeh\App\Log\Context;
 
-use RpHaven\App\Log\Context;
-use RpHaven\App\Log\Traits\StringableEnum;
+use Shrikeh\App\Log\Context;
+use Shrikeh\App\Log\Traits\StringableEnum;
 
 enum App: string implements Context
 {

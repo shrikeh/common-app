@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Command\CommandBus\Exception;
+namespace Shrikeh\App\Command\CommandBus\Exception;
 
-use RpHaven\App\Command\Exception\CommandException;
+use Shrikeh\App\Command\Exception\CommandException;
 
 interface CommandBusException extends CommandException
 {

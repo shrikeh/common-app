@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace RpHaven\App\Query\QueryHandler\Exception;
+namespace Shrikeh\App\Query\QueryHandler\Exception;
 
-use RpHaven\App\Query\Exception\QueryException;
+use Shrikeh\App\Query\Exception\QueryException;
 
 interface QueryHandlerException extends QueryException
 {
