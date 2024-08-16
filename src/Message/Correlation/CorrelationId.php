@@ -9,4 +9,6 @@ use Stringable;
 interface CorrelationId extends Stringable
 {
     public function toString(): string;
+
+    public function matches(CorrelationId $correlationId): bool;
 }
