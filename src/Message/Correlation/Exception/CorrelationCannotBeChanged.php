@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Shrikeh\App\Message\Correlation\Exception;
 
 use RuntimeException;
-use Shrikeh\App\Exception\Message;
+use Shrikeh\App\Exception\ExceptionMessage;
 use Shrikeh\App\Message\Correlated;
 use Shrikeh\App\Message\Correlation;
 
@@ -27,7 +27,7 @@ final class CorrelationCannotBeChanged extends RuntimeException implements Corre
         public readonly Correlated $cqrs,
         public readonly Correlation $new,
     ) {
-        parent::__construct(sprintf(Message::CORRELATION_CANNOT_BE_CHANGED->message(
+        parent::__construct(sprintf(ExceptionMessage::CORRELATION_CANNOT_BE_CHANGED->message(
             get_class($this->cqrs),
             $this->cqrs->correlated()->toString(),
             $this->new->toString(),

@@ -1,4 +1,4 @@
-ARG PHP_IMAGE_APP_VERSION="fpm-alpine3.15"
+ARG PHP_IMAGE_APP_VERSION="8.4.0alpha4-cli"
 
 FROM "php:${PHP_IMAGE_APP_VERSION}" as base
 RUN apk update

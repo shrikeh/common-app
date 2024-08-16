@@ -37,6 +37,6 @@ final readonly class Correlation implements Stringable
 
     public function matches(Correlation $correlation): bool
     {
-        return $this->correlationId->matches($correlation->correlationId);
+        return ($correlation === $this) || $this->correlationId->matches($correlation->correlationId);
     }
 }

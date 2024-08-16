@@ -33,7 +33,7 @@ trait WithCorrelation
     {
         if ($this->hasCorrelation()) {
             if (!$this->correlated()->matches($correlation)) {
-                throw new CorrelationCannotBeChanged();
+                throw new CorrelationCannotBeChanged($this, $correlation);
             }
             return $this;
         }
