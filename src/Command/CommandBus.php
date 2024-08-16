@@ -12,8 +12,8 @@ interface CommandBus
 {
     /**
      * @param Command $command
-     * @return Result|null
+     * @return Result
      * @throws CommandBusException
      */
-    public function handle(Command $command): ?Result;
+    public function handle(Command $command): Result;
 }

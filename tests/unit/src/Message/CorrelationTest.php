@@ -25,4 +25,6 @@ final class CorrelationTest extends TestCase
         $this->assertSame($ulid, $correlation->toString());
         $this->assertSame($ulid, (string) $correlation);
     }
+
+    public fun
 }

@@ -5,16 +5,19 @@ declare(strict_types=1);
 namespace Shrikeh\App\Message;
 
 use DateTimeImmutable;
+use DateTimeInterface;
 use Shrikeh\App\Message\Correlation\CorrelationId;
 use Stringable;
 
 final readonly class Correlation implements Stringable
 {
+    public DateTimeImmutable $dateTime;
+
     public function __construct(
         public CorrelationId $correlationId,
-        public DateTimeImmutable $dateTime = new DateTimeImmutable(),
+        DateTimeInterface $dateTime = new DateTimeImmutable(),
     ) {
-
+        $this->dateTime = DateTimeImmutable::createFromInterface($dateTime);
     }
 
     public function __toString(): string
@@ -25,5 +28,15 @@ final readonly class Correlation implements Stringable
     public function toString(): string
     {
         return $this->correlationId->toString();
+    }
+
+    public function update(DateTimeInterface $dateTime = new DateTimeImmutable()): self
+    {
+        return new self($this->correlationId, $dateTime);
+    }
+
+    public function matches(Correlation $correlation): bool
+    {
+        return $this->correlationId->matches($correlation->correlationId);
     }
 }
