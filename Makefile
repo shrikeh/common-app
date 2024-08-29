@@ -1,7 +1,7 @@
 #!make
 
 SHELL:=/usr/bin/env sh
-ROOT_DIR:="$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))"
+ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 .EXPORT_ALL_VARIABLES:
 .ONESHELL:
@@ -19,20 +19,29 @@ APP_CONTAINER:=app-common
 
 -include dev/make/php.mk
 
-login:
+login: .env-file
 	env;
 	$(info [+] Make: Log in to Docker container ${APP_CONTAINER}.)
-	docker compose run --entrypoint=/bin/sh "${APP_CONTAINER}";
+	docker compose --env-file ./.env --env-file ./.env.local run --entrypoint=/bin/sh "${APP_CONTAINER}";
+
+up: .env-file
+	docker compose --env-file ./.env --env-file ./.env.local up --detach --remove-orphans
+
+stop:
+	docker compose stop
+
+build: stop
+	docker compose --env-file ./.env --env-file ./.env.local  build --no-cache
 
 mac:
 	brew bundle install
 
-.test-env:
-	bash -c "[[ -f ./.env ]] || ${MAKE} .create-env";
+.env-file:
+	bash -c "[ -f './.env.local' ] || ${MAKE} .create-env";
 
 .create-env:
-	$(info [+] Make: ./.env not found, creating...)
-	./dev/scripts/setup.sh "${PWD}";
+	$(info [+] Make: No local .env file so creating)
+	${MAKE} .auth
 
 .crafting:
 	@echo "\033[92mCrafting excellence...\033[0m"
@@ -45,5 +54,9 @@ setup: .direnv mac init
 
 init: .init example
 test:  .test
-quality: .test-env .quality
+quality: .env .quality
 craft: .crafting .craft
+
+run: install
+	$(info [+] Make: Running command `shrikeh:test` inside Docker container)
+	docker compose run --env-file .env --env-file .env.local --rm "${APP_CONTAINER}";
