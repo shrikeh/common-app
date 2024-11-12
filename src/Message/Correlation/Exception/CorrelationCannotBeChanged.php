@@ -27,10 +27,10 @@ final class CorrelationCannotBeChanged extends RuntimeException implements Corre
         public readonly Correlated $cqrs,
         public readonly Correlation $new,
     ) {
-        parent::__construct(sprintf(ExceptionMessage::CORRELATION_CANNOT_BE_CHANGED->message(
+        parent::__construct(ExceptionMessage::CORRELATION_CANNOT_BE_CHANGED->message(
             get_class($this->cqrs),
             $this->cqrs->correlated()->toString(),
             $this->new->toString(),
-        )));
+        ));
     }
 }

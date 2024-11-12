@@ -16,7 +16,8 @@
     "shrikeh/php-coding-bible": ">=0.2.0",
     "shrikeh/testing-metapackage": ">=0.3",
     "symfony/uid": "^7.0",
-    "phpspec/prophecy-phpunit": ">=2.2"
+    "phpspec/prophecy-phpunit": ">=2.2",
+    "slevomat/coding-standard": "^8.15"
   },
   "repositories": [
     {
