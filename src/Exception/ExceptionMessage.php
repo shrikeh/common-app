@@ -19,8 +19,9 @@ namespace Shrikeh\App\Exception;
 enum ExceptionMessage: string implements AppExceptionMessage
 {
     case CORRELATION_CANNOT_BE_CHANGED = <<<'EOF'
-ExceptionMessage of type %s has existing Correlation of %s but attempted to set new Correlation %s
+Message of type %s has existing Correlation of %s but attempted to set new Correlation %s
 EOF;
+
 
     public function message(string ...$args): string
     {
