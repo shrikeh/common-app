@@ -20,12 +20,6 @@
     "roave/infection-static-analysis-plugin": "^1.35",
     "roave/security-advisories": "dev-latest"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/shrikeh/testing-metapackage"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Shrikeh\\App\\": "src"
